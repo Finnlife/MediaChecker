@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 loguru = "*"
+mysql-connector-python = "*"
+pyyaml = "*"
 
 [dev-packages]
 
