@@ -59,7 +59,11 @@ def check_video_integrity(path, db_connection):
                                             (cursor, file_hash, file, ffmpeg_result, str(end_time - start_time)))
                             db_connection.commit()
                         file_scanned = True
-                    except mysql.connector.Error as e:
+                    except mysql.connector.errors.OperationalError as e:
+                        if e.errno == 2013:  # Lost connection to MySQL server
+                            logger.warning("Connection lost. Reconnecting...")
+                            db_connection.reconnect()
+                            cursor = db_connection.cursor()
                         logger.error(e)
                         logger.waring("Recheck file!")
                         file_scanned = False
