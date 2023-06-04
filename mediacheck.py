@@ -61,6 +61,7 @@ def check_video_integrity(path, db_connection):
                         file_scanned = True
                     except mysql.connector.Error as e:
                         logger.error(e)
+                        logger.waring("Recheck file!")
                         file_scanned = False
                     
 
