@@ -30,6 +30,7 @@ def check_video_integrity(path, db_connection):
                         result = cursor.fetchone()
                         if result[0] > 0:
                             logger.info(f'Skipping {file_path} (already checked)')
+                            file_scanned = True
                             continue
                         
                         ffmpeg_result = ""
