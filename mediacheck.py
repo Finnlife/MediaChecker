@@ -8,11 +8,11 @@ import time
 
 
 def calculate_file_hash(file_path):
-    sha256_hash = hashlib.sha256()
+    md5_hash = hashlib.md5()
     with open(file_path, 'rb') as f:
         for byte_block in iter(lambda: f.read(4096), b""):
-            sha256_hash.update(byte_block)
-    return sha256_hash.hexdigest()
+            md5_hash.update(byte_block)
+    return md5_hash.hexdigest()
 
 def check_video_integrity(path, db_connection):
     cursor = db_connection.cursor()
@@ -56,6 +56,7 @@ def check_video_integrity(path, db_connection):
                     cursor.execute("INSERT INTO checked_files (file_hash, file_name, result, duration) VALUES (%s, %s, %s, %s)",
                                     (file_hash, file, ffmpeg_result, str(end_time - start_time),))
                     db_connection.commit()
+                
 
     cursor.close()
     db_connection.close()

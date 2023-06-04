@@ -1,0 +1,62 @@
+2023-06-01 12:43:30.891 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 12:48:29.671 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t01.mkv: OK
+2023-06-01 12:49:10.508 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t02.mkv: OK
+2023-06-01 12:49:14.623 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t03.mkv: OK
+2023-06-01 12:49:20.886 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t04.mkv: OK
+2023-06-01 12:49:28.555 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t05.mkv: OK
+2023-06-01 12:49:33.623 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t06.mkv: OK
+2023-06-01 12:49:40.122 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t07.mkv: OK
+2023-06-01 12:49:45.625 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t08.mkv: OK
+2023-06-01 13:09:19.467 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:11:29.907 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:11:39.053 | INFO     | __main__:check_video_integrity:14 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:14:20.327 | INFO     | __main__:check_video_integrity:34 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:14:32.315 | INFO     | __main__:check_video_integrity:28 - Skipping R:\move\Ruf der Macht\Ruf der Macht_t00.mkv (already checked)
+2023-06-01 13:29:47.894 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:30:55.439 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:31:57.313 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:32:53.977 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:34:59.123 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:35:44.701 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:36:01.964 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:36:25.073 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:38:41.701 | INFO     | __main__:check_video_integrity:38 - R:\move\Ruf der Macht\Ruf der Macht_t00.mkv: OK
+2023-06-01 13:40:22.150 | INFO     | __main__:check_video_integrity:38 - R:\move\test\Ruf der Macht_t06.mkv: OK
+2023-06-01 13:40:30.599 | INFO     | __main__:check_video_integrity:38 - R:\move\test\Ruf der Macht_t07.mkv: OK
+2023-06-01 13:40:37.266 | INFO     | __main__:check_video_integrity:38 - R:\move\test\Ruf der Macht_t08.mkv: OK
+2023-06-01 13:40:37.456 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test.mkv: Error - [matroska,webm @ 000002cf116e0340] EBML header parsing failed
+R:\move\test\test.mkv: Invalid data found when processing input
+2023-06-01 13:41:16.526 | INFO     | __main__:check_video_integrity:29 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 13:41:21.705 | INFO     | __main__:check_video_integrity:29 - Skipping R:\move\test\Ruf der Macht_t07.mkv (already checked)
+2023-06-01 13:41:25.017 | INFO     | __main__:check_video_integrity:29 - Skipping R:\move\test\Ruf der Macht_t08.mkv (already checked)
+2023-06-01 13:41:25.105 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test.mkv: Error - [matroska,webm @ 000002d0153f0340] EBML header parsing failed
+R:\move\test\test.mkv: Invalid data found when processing input
+2023-06-01 13:41:25.144 | INFO     | __main__:check_video_integrity:50 - R:\move\test\test.mkv: Rechecked
+2023-06-01 13:41:57.534 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 13:42:01.850 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t07.mkv (already checked)
+2023-06-01 13:42:05.486 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t08.mkv (already checked)
+2023-06-01 13:42:05.570 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test.mkv: Error - [matroska,webm @ 00000282abcc0340] EBML header parsing failed
+R:\move\test\test.mkv: Invalid data found when processing input
+2023-06-01 13:42:05.612 | INFO     | __main__:check_video_integrity:50 - R:\move\test\test.mkv: Rechecked
+2023-06-01 13:42:27.473 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 13:42:32.356 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t07.mkv (already checked)
+2023-06-01 13:42:36.006 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t08.mkv (already checked)
+2023-06-01 13:42:36.094 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test.mkv: Error - [matroska,webm @ 000002b2040d0340] EBML header parsing failed
+R:\move\test\test.mkv: Invalid data found when processing input
+2023-06-01 13:42:36.132 | INFO     | __main__:check_video_integrity:50 - R:\move\test\test.mkv: Rechecked
+2023-06-01 13:43:26.622 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 13:43:30.883 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t07.mkv (already checked)
+2023-06-01 13:43:34.060 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t08.mkv (already checked)
+2023-06-01 13:43:34.152 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test.mkv: Error - [matroska,webm @ 0000012ebe230340] EBML header parsing failed
+R:\move\test\test.mkv: Invalid data found when processing input
+2023-06-01 13:43:34.191 | INFO     | __main__:check_video_integrity:50 - R:\move\test\test.mkv: Rechecked
+2023-06-01 13:43:59.666 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 13:44:04.122 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t07.mkv (already checked)
+2023-06-01 13:44:07.315 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t08.mkv (already checked)
+2023-06-01 13:44:11.108 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\test.mkv (already checked)
+2023-06-01 13:44:11.227 | ERROR    | __main__:check_video_integrity:41 - R:\move\test\test2.mkv: Error - [matroska,webm @ 000002caf9ec0340] EBML header parsing failed
+R:\move\test\test2.mkv: Invalid data found when processing input
+2023-06-01 13:44:11.265 | INFO     | __main__:check_video_integrity:50 - R:\move\test\test2.mkv: Rechecked
+2023-06-01 21:46:27.280 | INFO     | __main__:check_video_integrity:30 - Skipping R:\move\test\Ruf der Macht_t06.mkv (already checked)
+2023-06-01 22:17:44.777 | INFO     | __main__:check_video_integrity:38 - R:\Movies\Mission- Impossible\Mission- Impossible_t01.mkv: OK
+2023-06-01 22:51:45.022 | INFO     | __main__:check_video_integrity:38 - R:\Movies\Venom- Let There Be Carnage\Venom- Let There Be Carnage_t00.mkv: OK

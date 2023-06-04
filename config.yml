@@ -1,0 +1,8 @@
+db:
+  host: "sql.dev4life.de"
+  user: "mediachecker"
+  password: "BDTtfu@rpg2xcJG2"
+  database: "mediachecker"
+
+check:
+  path: "R:\\Movies\\Venom-\ Let\ There\ Be\ Carnage"
