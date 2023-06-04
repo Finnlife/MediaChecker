@@ -65,7 +65,7 @@ def check_video_integrity(path, db_connection):
                             db_connection.reconnect()
                             cursor = db_connection.cursor()
                         logger.error(e)
-                        logger.waring("Recheck file!")
+                        logger.warning("Recheck file!")
                         file_scanned = False
                     
 
