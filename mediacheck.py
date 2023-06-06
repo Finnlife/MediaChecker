@@ -67,6 +67,10 @@ def check_video_integrity(path, db_connection):
                         logger.error(e)
                         logger.warning("Recheck file!")
                         file_scanned = False
+                    except Exception as e:
+                        logger.error(e)
+                        logger.warning("Recheck file. Unknown Error")
+                        file_scanned = False
                     
 
     cursor.close()
