@@ -56,7 +56,7 @@ def check_video_integrity(path, db_connection):
                             db_connection.commit()
                         else:
                             cursor.execute("INSERT INTO checked_files (file_hash, file_name, result, duration) VALUES (%s, %s, %s, %s)",
-                                            (cursor, file_hash, file, ffmpeg_result, str(end_time - start_time)))
+                                            (file_hash, file, ffmpeg_result, str(end_time - start_time)))
                             db_connection.commit()
                         file_scanned = True
                     except mysql.connector.errors.OperationalError as e:
