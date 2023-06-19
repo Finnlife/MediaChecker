@@ -8,7 +8,7 @@ import time
 
 def calculate_short_file_hash(file_path):
     chunk_size = 4096
-    max_size = 2 * 1024 * 1024 * 1024  # 2 GB
+    max_size = 1 * 1024 * 1024 * 1024  # 2 GB
     sha256_hash = hashlib.sha256()
     with open(file_path, 'rb') as f:
         bytes_read = 0
