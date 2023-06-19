@@ -85,15 +85,17 @@ if __name__ == "__main__":
     db_password = config['db']['password']
     db_name = config['db']['database']
 
-    db_connection = mysql.connector.connect(
-        host=db_host,
-        user=db_user,
-        password=db_password,
-        database=db_name
-    )
+    while True:
 
-    # Configure Loguru logger settings
-    logger.add("video_integrity.log", rotation="10 MB", compression="zip", level="INFO")
+        db_connection = mysql.connector.connect(
+            host=db_host,
+            user=db_user,
+            password=db_password,
+            database=db_name
+        )
 
-    # Call the function to check integrity
-    check_video_integrity(path, db_connection)
+        # Configure Loguru logger settings
+        logger.add("video_integrity.log", rotation="10 MB", compression="zip", level="INFO")
+
+        # Call the function to check integrity
+        check_video_integrity(path, db_connection)
