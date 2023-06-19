@@ -53,7 +53,7 @@ def check_video_integrity(path, db_connection):
                         if result[0] > 0:
                             logger.info(f'Skipping {file_path} (already checked)')
                             logger.info(f'Recalculate Hash...')
-                            cursor.execute("SELECT file_hash FROM checked_files WHERE file_name = %s AND result = 'OK'", (file_hash,))
+                            cursor.execute("SELECT file_hash FROM checked_files WHERE file_name = %s AND result = 'OK'", (file,))
                             old_results = cursor.fetchall()
                             for old_result in old_results:
                                 old_file_hash = old_result[0]
