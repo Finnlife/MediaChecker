@@ -66,7 +66,7 @@ def check_video_integrity(path, db_connection):
                                 new_file_hash = file_hash
 
                                 # Aktualisiere den neuen Hash in der Datenbank
-                                cursor.execute("UPDATE checked_files SET new_file_hash = %s WHERE file_hash = %s", (new_file_hash, old_file_hash,))
+                                cursor.execute("UPDATE checked_files SET short_file_hash = %s WHERE file_hash = %s", (new_file_hash, old_file_hash,))
                                 db_connection.commit()
                                 logger.info('Updated File-Hash')
                             file_scanned = True
