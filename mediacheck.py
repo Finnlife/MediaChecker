@@ -6,6 +6,20 @@ from loguru import logger
 import yaml
 import time
 
+def calculate_short_file_hash(file_path):
+    chunk_size = 4096
+    max_size = 2 * 1024 * 1024 * 1024  # 2 GB
+    sha256_hash = hashlib.sha256()
+    with open(file_path, 'rb') as f:
+        bytes_read = 0
+        while bytes_read < max_size:
+            chunk = f.read(chunk_size)
+            if not chunk:
+                break
+            sha256_hash.update(chunk)
+            bytes_read += len(chunk)
+    return sha256_hash.hexdigest()
+
 def calculate_file_hash(file_path):
     sha256_hash = hashlib.sha256()
     with open(file_path, 'rb') as f:
@@ -24,12 +38,37 @@ def check_video_integrity(path, db_connection):
                     try:
                         start_time = time.time()
                         file_path = os.path.join(root, file)
-                        file_hash = calculate_file_hash(file_path)
+                        file_hash = calculate_short_file_hash(file_path)
 
-                        cursor.execute("SELECT COUNT(*) FROM checked_files WHERE file_hash = %s AND result = 'OK'", (file_hash,))
+
+                        cursor.execute("SELECT COUNT(*) FROM checked_files WHERE short_file_hash = %s AND result = 'OK'", (file_hash,))
                         result = cursor.fetchone()
                         if result[0] > 0:
                             logger.info(f'Skipping {file_path} (already checked)')
+                            file_scanned = True
+                            continue
+                            
+                        cursor.execute("SELECT COUNT(*) FROM checked_files WHERE file_name = %s AND result = 'OK'", (file,))
+                        result = cursor.fetchone()
+                        if result[0] > 0:
+                            logger.info(f'Skipping {file_path} (already checked)')
+                            logger.info(f'Recalculate Hash...')
+                            cursor.execute("SELECT file_hash FROM checked_files WHERE file_name = %s AND result = 'OK'", (file_hash,))
+                            old_results = cursor.fetchall()
+                            for old_result in old_results:
+                                old_file_hash = old_result[0]
+                                recalc_old_hash = calculate_file_hash(file_path)
+                                if recalc_old_hash != old_file_hash:
+                                    logger.error('Path not matching old hash! Old Hash: {old_file_hash} Recalced-Hash: {recalc_old_hash}')
+                                    continue
+
+                                # Berechne den neuen Hash basierend auf dem alten Dateinamen
+                                new_file_hash = file_hash
+
+                                # Aktualisiere den neuen Hash in der Datenbank
+                                cursor.execute("UPDATE checked_files SET new_file_hash = %s WHERE file_hash = %s", (new_file_hash, old_file_hash,))
+                                db_connection.commit()
+                                logger.info('Updated File-Hash')
                             file_scanned = True
                             continue
                         
