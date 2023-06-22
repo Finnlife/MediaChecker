@@ -59,7 +59,7 @@ def check_video_integrity(path, db_connection):
                                 old_file_hash = old_result[0]
                                 recalc_old_hash = calculate_file_hash(file_path)
                                 if recalc_old_hash != old_file_hash:
-                                    logger.error('Path not matching old hash! Old Hash: {old_file_hash} Recalced-Hash: {recalc_old_hash}')
+                                    logger.error('Path not matching old hash! Old Hash: %s Recalced-Hash: %s' % (old_file_hash, recalc_old_hash))
                                     continue
 
                                 # Berechne den neuen Hash basierend auf dem alten Dateinamen
